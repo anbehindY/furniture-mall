@@ -7,9 +7,6 @@ gem "rubocop", ">= 1.0", "< 2.0"
 
 gem "devise"
 
-# Rack cors for handling cross origin resource sharing
-gem "rack-cors"
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
