@@ -25,7 +25,7 @@ development:
   <<: *default
   database: furniture_mall_backend_development
   username: postgres
-  password: Eudondian@003
+  password: massa2000
   host: localhost
   port: 5432
 
