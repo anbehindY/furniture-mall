@@ -1,14 +1,9 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby ">= 3.0.0"
+ruby ">= 3.2.2"
 
 gem "rubocop", ">= 1.0", "< 2.0"
-
-gem "devise"
-
-# Rack cors for handling cross origin resource sharing
-gem "rack-cors"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
@@ -30,6 +25,7 @@ gem "puma", "~> 5.0"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
+
 # Devise and JWT token authentication
 gem "devise"
 gem "devise-jwt"
