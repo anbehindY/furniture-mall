@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'appointments/index'
+  get 'appointments/show'
+  get 'appointments/update'
+  get 'appointments/destroy'
+  get 'appointments/create'
+  get 'furnitures/index'
+  get 'furnitures/show'
+  get 'furnitures/update'
+  get 'furnitures/destroy'
+  get 'furnitures/create'
   devise_for :users, path: "", path_names: {
                        sign_in: "login",
                        sign_out: "logout",
