@@ -1,0 +1,55 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/furnitures/{id}":
+    get:
+      summary: Retrieves a furniture
+      tags:
+      - Furnitures
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: furniture found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                required:
+                - id
+        '404':
+          description: furniture not found
+  "/api/v1/furnitures":
+    get:
+      summary: Retrieves all furnitures
+      tags:
+      - Furnitures
+      responses:
+        '200':
+          description: furnitures found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                  required:
+                  - id
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
