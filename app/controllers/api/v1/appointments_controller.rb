@@ -1,4 +1,4 @@
-class API::V1::AppointmentsController < ApplicationController
+class Api::V1::AppointmentsController < ApplicationController
   # For 'My Appointments' page
   def index
     @appointments = current_user.appointments
@@ -12,8 +12,8 @@ class API::V1::AppointmentsController < ApplicationController
 
   # Form action for 'Make Appointment' page
   def create
-    @furniture = Furniture.find(params[:furniture_id])
-    @appointment = Appointment.create(current_user.id, @furniture.id, appointment_params)
+    # @furniture = Furniture.find(params[:furniture_id])
+    @appointment = Appointment.create(appointment_params)
     if @appointment.save
       render json: @appointment
     else
@@ -24,6 +24,6 @@ class API::V1::AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:appoint_date)
+    params.require(:appointment).permit(:appoint_date, :furniture_id, :user_id)
   end
 end
