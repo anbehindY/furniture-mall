@@ -1,5 +1,3 @@
-# spec/requests/api/v1/appointments_spec.rb
-
 require 'swagger_helper'
 
 RSpec.describe 'API::V1::Appointments', type: :request do
