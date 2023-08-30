@@ -1,5 +1,3 @@
-# config/swagger.yml
-
 openapi: 3.0.1
 info:
   title: Your API Title
