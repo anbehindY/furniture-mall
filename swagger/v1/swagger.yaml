@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Your API Title
+  title: Furniture API Documentation
   version: 1.0.0
 
 paths:
