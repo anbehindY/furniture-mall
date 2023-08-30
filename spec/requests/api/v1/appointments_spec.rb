@@ -10,16 +10,16 @@ RSpec.describe 'API::V1::Appointments', type: :request do
 
       response '200', 'appointments found' do
         schema type: :array,
-          items: {
-            type: :object,
-            properties: {
-              id: { type: :integer },
-              appoint_date: { type: :string, format: 'date-time' },
-              furniture_id: { type: :integer },
-              user_id: { type: :integer }
-            },
-            required: ['id', 'appoint_date', 'furniture_id', 'user_id']
-          }
+               items: {
+                 type: :object,
+                 properties: {
+                   id: { type: :integer },
+                   appoint_date: { type: :string, format: 'date-time' },
+                   furniture_id: { type: :integer },
+                   user_id: { type: :integer }
+                 },
+                 required: %w[id appoint_date furniture_id user_id]
+               }
 
         run_test!
       end
@@ -37,7 +37,7 @@ RSpec.describe 'API::V1::Appointments', type: :request do
           furniture_id: { type: :integer },
           user_id: { type: :integer }
         },
-        required: ['appoint_date', 'furniture_id', 'user_id']
+        required: %w[appoint_date furniture_id user_id]
       }
 
       response '201', 'appointment created' do

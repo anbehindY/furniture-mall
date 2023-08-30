@@ -1,23 +1,25 @@
----
+# config/swagger.yml
+
 openapi: 3.0.1
 info:
-  title: API V1
-  version: v1
+  title: Your API Title
+  version: 1.0.0
+
 paths:
-  "/api/v1/furnitures/{id}":
+  /api/v1/furnitures/{id}:
     get:
       summary: Retrieves a furniture
       tags:
-      - Furnitures
+        - Furnitures
       parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
       responses:
         '200':
-          description: furniture found
+          description: Furniture found
           content:
             application/json:
               schema:
@@ -25,18 +27,16 @@ paths:
                 properties:
                   id:
                     type: integer
-                required:
-                - id
-        '404':
-          description: furniture not found
-  "/api/v1/furnitures":
+                  # Add other furniture attributes here
+
+  /api/v1/furnitures:
     get:
       summary: Retrieves all furnitures
       tags:
-      - Furnitures
+        - Furnitures
       responses:
         '200':
-          description: furnitures found
+          description: Furnitures found
           content:
             application/json:
               schema:
@@ -46,10 +46,76 @@ paths:
                   properties:
                     id:
                       type: integer
-                  required:
-                  - id
-servers:
-- url: https://{defaultHost}
-  variables:
-    defaultHost:
-      default: www.example.com
+                    # Add other furniture attributes here
+
+  /api/v1/appointments:
+    get:
+      summary: Retrieves all user appointments
+      tags:
+        - Appointments
+      responses:
+        '200':
+          description: Appointments found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    appoint_date:
+                      type: string
+                      format: date-time
+                    furniture_id:
+                      type: integer
+                    user_id:
+                      type: integer
+
+    post:
+      summary: Creates a new appointment
+      tags:
+        - Appointments
+      requestBody:
+        description: Appointment object
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                appoint_date:
+                  type: string
+                  format: date-time
+                furniture_id:
+                  type: integer
+                user_id:
+                  type: integer
+        responses:
+          '201':
+            description: Appointment created
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    appoint_date:
+                      type: string
+                      format: date-time
+                    furniture_id:
+                      type: integer
+                    user_id:
+                      type: integer
+
+          '422':
+            description: Invalid appointment parameters
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
