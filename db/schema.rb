@@ -10,35 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_25_145023) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_30_045552) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "furniture_id", null: false
-    t.datetime "appoint_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "appoint_date"
     t.index ["furniture_id"], name: "index_appointments_on_furniture_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
   create_table "furnitures", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "name", null: false
     t.string "image"
     t.text "description"
     t.integer "price"
     t.integer "warranty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["user_id"], name: "index_furnitures_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "full_name", default: "", null: false
     t.string "email", default: "", null: false
+    t.string "username", null: false
     t.string "role", default: "customer", null: false
     t.string "profile", default: "avatar.png", null: false
     t.string "jti", null: false
