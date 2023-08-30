@@ -1,5 +1,3 @@
-# spec/requests/api/v1/furnitures_spec.rb
-
 require 'swagger_helper'
 
 RSpec.describe 'API::V1::Furnitures', type: :request do
