@@ -9,10 +9,10 @@ class Api::V1::FurnituresController < ApplicationController
     render json: @furniture
   end
 
-   def create
+  def create
     @furniture = Furniture.create(furniture_params)
 
-     if @furniture.save
+    if @furniture.save
       render json: { status: 'Success', message: 'Furniture created successfully' }, status: :created
     else
       render json: { status: 'Failed', message: 'Failed to create furniture' }, status: :unprocessable_entity
