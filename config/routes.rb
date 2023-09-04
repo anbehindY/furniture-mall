@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :furnitures, only: [:show,  :index] do
+      resources :furnitures, only: [:show, :index, :create] do
         resources :appointments, only: [:new, :create]
       end
       resources :appointments, only: [:index]
