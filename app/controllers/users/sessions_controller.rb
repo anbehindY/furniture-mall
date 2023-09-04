@@ -20,6 +20,7 @@ class Users::SessionsController < Devise::SessionsController
       current_user = User.find(jwt_payload['sub'])
     end
 
+
     if current_user
       render json: {
         status: 200,
