@@ -1,11 +1,11 @@
 class Api::V1::FurnituresController < ApplicationController
   # before_action :authenticate_user!
 
-   def index
+  def index
     @furnitures = Furniture.all
     render json: @furnitures
   end
-  
+
   def show
     furniture = Furniture.find(params[:id])
     render json: furniture
