@@ -1,13 +1,18 @@
 class Api::V1::AppointmentsController < ApplicationController
   # For 'My Appointments' page
   def index
-    @appointments = current_user.appointments
+    @appointments = Appointment.all
     render json: @appointments
   end
 
   # For 'Make Appointment' page
   def new
     @appointment = Appointment.new
+  end
+
+  def show
+    furniture = Appointment.find(params[:id])
+    render json: appointment
   end
 
   # Form action for 'Make Appointment' page
