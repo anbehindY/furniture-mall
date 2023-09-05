@@ -1,21 +1,23 @@
 class Api::V1::FurnituresController < ApplicationController
+  # before_action :authenticate_user!
+
+   def index
+    @furnitures = Furniture.all
+    render json: @furnitures
+  end
+  
   def show
     furniture = Furniture.find(params[:id])
     render json: furniture
   end
 
-  def index
-    @furniture = Furniture.all
-    render json: @furniture
-  end
-
   def create
-    @furniture = Furniture.create(furniture_params)
+    @furniture = Furniture.new(furniture_params)
 
     if @furniture.save
       render json: { status: 'Success', message: 'Furniture created successfully' }, status: :created
     else
-      render json: { status: 'Failed', message: 'Failed to create furniture' }, status: :unprocessable_entity
+      render json: { errors: @furniture.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
