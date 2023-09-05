@@ -38,7 +38,6 @@ class Api::V1::AppointmentsController < ApplicationController
     end
   end
 
-
   private
 
   def appointment_params
