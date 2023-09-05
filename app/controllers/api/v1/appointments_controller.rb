@@ -11,7 +11,7 @@ class Api::V1::AppointmentsController < ApplicationController
   end
 
   def show
-    furniture = Appointment.find(params[:id])
+    Appointment.find(params[:id])
     render json: appointment
   end
 
@@ -37,7 +37,7 @@ class Api::V1::AppointmentsController < ApplicationController
       render json: { error: 'Appointment not found.' }, status: :not_found
     end
   end
-  
+
 
   private
 
