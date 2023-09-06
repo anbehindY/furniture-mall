@@ -5,7 +5,6 @@ class Api::V1::AppointmentsController < ApplicationController
     render json: @appointments
   end
 
-
   def new
     @appointment = Appointment.new
   end
@@ -22,20 +21,7 @@ class Api::V1::AppointmentsController < ApplicationController
     if @appointment.save
       render json: { status: 'Success', message: 'Appointment created successfully' }, status: :created
     else
-      render json: { error: 'Unable to create appointment.' }, status: :unprocessable_entity  
-    end
-  end
-
-   def destroy
-    @appointment = Appointment.find(params[:id])
-    @appointment.destroy
-
-    if @appointment
-       render json: { status: 'Deleted', message: 'Appointment was successfully deleted'  }
-      
-    else
-       render json: { status: 'error', message: 'Unable to delete'  }, status: :unprocessable_entity 
-     
+      render json: { error: 'Unable to create appointment.' }, status: :unprocessable_entity
     end
   end
 
