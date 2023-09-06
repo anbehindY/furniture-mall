@@ -13,12 +13,18 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :furnitures, only: [:show,  :index, :create] do
-        resources :appointments, only: [:new, :create, :destroy]
+      resources :furnitures do
+        resources :appointments
       end
-      resources :appointments, only: [:index, :destroy]
+
+      resources :users do
+        resources :appointments
+      end
+     resources :appointments, only:[:destroy]
     end
   end
+
+  resources :appointments, only: [:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
