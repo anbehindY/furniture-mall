@@ -22,10 +22,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello rails backend <a name="about-project"></a>
+# 📖 FURNITURE MALL BACKEND <a name="about-project"></a>
 
 
-The "Hello Rails Backend" application is developed using Ruby on Rails and serves as a backend system. Its purpose is to provide an interface, or API, that supplies messages to another application called [Hello React Frontend](https://github.com/eudondian/hello-react-front-end/tree/front-end) which is built using the React framework.
+The "Furniture Mall Backend" application is developed using Ruby on Rails to serves as a backend system. Its purpose is to provide an interface, or API, that supplies messages to another application called [Furniture Mall Frontend](https://github.com/anbehindY/furniture-mall-frontend.git) which is built using the React framework.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -88,14 +88,14 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/eudondian/hello-rails-back-end.git
+  git clone https://github.com/anbehindY/furniture-mall-backend.git
 ```
 ### Install
 
 Install this project with:
 
 ```sh
-  cd hello-rails-r-app
+  cd furniture-mall-backend
   bundle install
  ```
  ```sh
@@ -110,7 +110,7 @@ To run the project, execute the following command:
 
 ```sh
   
-  rails s/api/greetings
+  rails s/api/dashboard/furnitures
 
   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,7 +144,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/eudondian/hello-rails-back-end/issues).
+Feel free to check the [issues page](https://github.com/anbehindY/furniture-mall-backend/issues).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
