@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   include Devise::JWT::RevocationStrategies::JTIMatcher
 
-  has_many :furnitures
+  has_many :furnitures, through: :appointments
   has_many :appointments
 
   devise :database_authenticatable, :registerable, :recoverable, :validatable,

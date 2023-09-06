@@ -1,5 +1,5 @@
 class Api::V1::FurnituresController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @furnitures = Furniture.all
@@ -22,6 +22,6 @@ class Api::V1::FurnituresController < ApplicationController
   end
 
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :warranty, :price, :image)
+    params.require(:furniture).permit(:name, :description, :warranty, :price, :image, :user_id)
   end
 end
