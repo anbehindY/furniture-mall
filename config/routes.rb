@@ -20,12 +20,9 @@ Rails.application.routes.draw do
       resources :users do
         resources :appointments
       end
-     resources :appointments, only:[:destroy]
+     resources :appointments, only:[:index, :destroy]
     end
   end
-
-  resources :appointments, only: [:index]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"

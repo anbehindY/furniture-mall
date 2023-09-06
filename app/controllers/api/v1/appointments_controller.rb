@@ -1,5 +1,5 @@
 class Api::V1::AppointmentsController < ApplicationController
-  # For 'My Appointments' page
+   before_action :authenticate_user!
   def index
     @appointments = Appointment.all
     render json: @appointments
@@ -14,7 +14,6 @@ class Api::V1::AppointmentsController < ApplicationController
     render json: appointment
   end
 
-  # Form action for 'Make Appointment' page
   def create
     @appointment = Appointment.new(appointment_params)
 
