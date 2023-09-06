@@ -125,6 +125,30 @@ To run the project, execute the following command:
 - Twitter: [@Click here](https://twitter.com/EUdondian)
 - LinkedIn: [@Click here](https://www.linkedin.com/in/esther-udondian/)
 
+👤 **Prince Nwuke**
+
+- GitHub: [@prius2055]()
+- Twitter: [@prius2055]()
+- LinkedIn: [@prius2055]()
+
+👤 **Massa zoumanigui**
+
+- GitHub: [@massazoum]()
+- Twitter: [@zoumaniguimass1]()
+- LinkedIn: [LinkedIn]()
+
+👤 **Alfie Yang**
+
+- GitHub: [ @anbehindY]()
+- Twitter: [@yanminthwin]()
+- LinkedIn: [@Alfie Yang]()
+
+👤 **Osman Wako**
+
+- GitHub: [@githubhandle]()
+- Twitter: [@twitterhandle]()
+- LinkedIn: [LinkedIn]()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +157,7 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
--  Add style.
+- User should be able to make an online payment
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,7 +186,7 @@ If you like this project give me a star
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Microverse for the learning experinece, and my partners for all help given
+We would like to thank Microverse for the learning experience, our  coding partners for all needed coorporation and Murat Korkmaz of Behance to the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
