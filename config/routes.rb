@@ -21,7 +21,6 @@ Rails.application.routes.draw do
         resources :appointments
       end
      resources :appointments, only:[:destroy]
-      # delete '/api/v1/appointments/:id', to: 'appointments#destroy'
     end
   end
 
