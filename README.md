@@ -25,7 +25,7 @@
 # 📖 FURNITURE MALL BACKEND <a name="about-project"></a>
 
 
-The "Furniture Mall Backend" application is developed using Ruby on Rails to serves as a backend system. Its purpose is to provide an interface, or API, that supplies messages to another application called [Furniture Mall Frontend](https://github.com/anbehindY/furniture-mall-frontend.git) which is built using the React framework.
+The "Furniture Mall Backend" application is developed using Ruby on Rails to serves as a backend system. Its purpose is to provide an interface, or API, that supplies furniture data to another application called [Furniture Mall Frontend](https://github.com/anbehindY/furniture-mall-frontend.git) which is built using the React framework.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,12 @@ The "Furniture Mall Backend" application is developed using Ruby on Rails to ser
 
 ### Key Features <a name="key-features"></a>
 
-- Greeting page 
+- Furniture Catalog: Display a comprehensive catalog of available furniture items, including images, prices, and detailed descriptions.
+
+- Reservation System: Enable users to select and reserve furniture items through a user-friendly booking system.
+
+- User Profiles: Allow users to manage their profiles, update personal information, and view their reservation history.
+
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -157,7 +162,9 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- User should be able to make an online payment
+- User will be able to secure payment
+- customer support channels such as chat, email, or phone to assist users with inquiries or issues will be added.
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -186,7 +193,7 @@ If you like this project give me a star
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-We would like to thank Microverse for the learning experience, our  coding partners for all needed coorporation and Murat Korkmaz of Behance to the design.
+We would like to thank Microverse for the learning experience, our  coding partners for all needed coorporation and Murat Korkmaz of Behance for the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
