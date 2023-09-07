@@ -1,5 +1,5 @@
 class Api::V1::FurnituresController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @furnitures = Furniture.all
@@ -21,7 +21,17 @@ class Api::V1::FurnituresController < ApplicationController
     end
   end
 
+  def destroy
+    @furniture = Furniture.find(params[:id])
+
+    if @furniture.destroy
+      render json: { status: 'Success', message: 'Furniture deleted sucessfully' }, status: :ok
+    else
+      render json: { status: 'Failed', message: 'Failed to delete furniture' }, status: :bad_request
+    end
+  end
+
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :warranty, :price, :image)
+    params.require(:furniture).permit(:name, :description, :warranty, :price, :image, :user_id)
   end
 end
