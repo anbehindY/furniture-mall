@@ -21,7 +21,7 @@ class Api::V1::FurnituresController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     @furniture = Furniture.find(params[:id])
 
     if @furniture.destroy
