@@ -6,7 +6,7 @@ RSpec.describe 'furnitures', type: :model do
   let(:sofa) { Furniture.create!(name: 'sofa', description: 'a sofa', price: 100, user_id: user1.id) }
   let(:appointment1) { Appointment.create!(appoint_date: '2021-01-01', user_id: user1.id, furniture_id: sofa.id) }
   let(:appointment2) { Appointment.create!(appoint_date: '2021-01-01', user_id: user2.id, furniture_id: sofa.id) }
-  
+
   context 'associations' do
     it 'has many appointments' do
       expect(sofa.appointments).to include(appointment1)
@@ -20,7 +20,6 @@ RSpec.describe 'furnitures', type: :model do
   end
 
   context 'validations' do
-    
     it 'is valid with valid attributes' do
       expect(sofa).to be_valid
     end
