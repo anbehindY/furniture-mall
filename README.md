@@ -115,7 +115,7 @@ To run the project, execute the following command:
 
 ```sh
   
-  rails s/api/dashboard/furnitures
+  rails s
 
   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
