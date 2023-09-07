@@ -115,7 +115,7 @@ To run the project, execute the following command:
 
 ```sh
   
-  rails s
+  rails server -p 3001
 
   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
