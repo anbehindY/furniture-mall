@@ -1,7 +1,7 @@
 class Api::V1::AppointmentsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.includes(:furniture).where(user_id: params[:user_id])
     render json: @appointments
   end
 
